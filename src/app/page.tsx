@@ -12,7 +12,15 @@ export default function Home() {
           <h2>Master Your Vocabulary, One Word At A Time</h2>
         </div>
       </header>
-      <main className={styles.main}></main>
+
+      <main className={styles.main}>
+        <h1>Personalized Learning Journey</h1>
+        <p>
+          WordEm adapts to your knowledge level, categorizing words into Bad, Good, Fine an Easy
+          groups for efficient learning.{' '}
+        </p>
+      </main>
+
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
