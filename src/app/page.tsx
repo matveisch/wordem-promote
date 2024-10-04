@@ -1,6 +1,23 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
+const info = {
+  features: [
+    'Intelligent algorithm for personalized learning',
+    'Progressive point system to track your improvement',
+    'Comprehensive statistics to monitor your progress',
+    'Simple and intuitive onboarding process',
+  ],
+  premiumFeatures: [
+    'Unlimited decks for better organization',
+    'Sub-decks for granular categorization',
+    'Customizable deck themes',
+    'Detailed statistics and insights',
+    'Adjustable knowledge level settings',
+    'Additional learning customization options',
+  ],
+};
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -14,11 +31,39 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <h1>Personalized Learning Journey</h1>
-        <p>
-          WordEm adapts to your knowledge level, categorizing words into Bad, Good, Fine an Easy
-          groups for efficient learning.{' '}
-        </p>
+        <div>
+          <h2>Personalized Learning Journey</h2>
+          <p>
+            WordEm adapts to your knowledge level, categorizing words into Bad, Good, Fine an Easy
+            groups for efficient learning.{' '}
+          </p>
+        </div>
+
+        <div>
+          <h2>Key Features</h2>
+          <ul>
+            {info.features.map((feature, index) => (
+              <li key={`${index}-feature`}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2>Unlock Premium Features</h2>
+          <ul>
+            {info.premiumFeatures.map((pf, index) => (
+              <li key={`${index}-pf`}>{pf}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2>Perfect For All Learners</h2>
+          <p>
+            Whether you're a student preparing for exams, learning a new language, or simply want to
+            enhance your word power, WordEm is your ideal companion.
+          </p>
+        </div>
       </main>
 
       <footer className={styles.footer}>
