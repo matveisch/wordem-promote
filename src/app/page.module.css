@@ -40,6 +40,11 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+
+  .keyFeatures ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .main ol {
